@@ -81,6 +81,7 @@ $array_ProductsFood = [
                             </h5>
 
                             <h5>
+                                Taglia
                             <?php echo $curProduct->getSize() ?>
                             </h5>
                             <h5>
