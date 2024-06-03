@@ -7,11 +7,13 @@ require_once __DIR__ . "/gatti.php";
 class Prodotti {
     private string $name;
     private float  $price;
+   
           
     public function __construct(string $name, float $price)
     {
         $this->name  = $name;
-        $this->price = $price;       
+        $this->price = $price;    
+
     }
 
     /**
