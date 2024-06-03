@@ -1,16 +1,17 @@
 <?php
+require_once __DIR__ . "/type.php";
 require_once __DIR__ . "/cani.php";
 require_once __DIR__ . "/gatti.php";
 
 
 class Prodotti {
     private string $name;
-    private float $price;    
-
-    public function __construct(string $_name, float $_price)
+    private float  $price;
+          
+    public function __construct(string $name, float $price)
     {
-        $this->name  = $_name;
-        $this->price = $_price;
+        $this->name  = $name;
+        $this->price = $price;       
     }
 
     /**
