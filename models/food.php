@@ -51,7 +51,7 @@ class Food extends Products {
      */ 
     public function setAge_range($age_range)
     {
-        if(!in_array($age_range,["Cucciolo","Adulto","Anziano","Per Tutte le fascie d'età"])) {
+        if(!in_array($age_range,["Cucciolo","Adulto","Anziano","Tutte le fascie d'età"])) {
             throw new Exception("Fascia d'eta non presente");
         }
     }
