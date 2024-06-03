@@ -29,9 +29,13 @@ $cibo2 = new Food("Dog Heroes", 44.99, "./img/cibo-cane.jpg", "Cane", 3.8, "Tutt
 $array_ProductsToys = [
     $giocattolo1,
     $giocattolo2,   
+    $giocattolo1,
+    $giocattolo2,   
 ];
 
 $array_ProductsFood = [
+    $cibo1,
+    $cibo2,
     $cibo1,
     $cibo2,
 ];
@@ -53,12 +57,14 @@ $array_ProductsFood = [
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
+
+    <div class="container py-5 text-center ">
+        <h2>Giocattoli Per Animali</h2>
+        <div class="row py-5 ">
+            <div class="col d-flex justify-content-around">
                 <?php foreach ($array_ProductsToys as $curProduct) { ?>
                     <!-- Card product Toys -->
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 15rem;">
                         <div class="card-body">
                             <img class="img-fluid" src="<?php echo $curProduct->getImage() ?>" alt="">
                             <h5 class="card-title">
@@ -93,10 +99,12 @@ $array_ProductsFood = [
                 <?php } ?>
             </div>
         </div>
-        <div class="row">
-            <div class="col-6">
+
+        <h2>Cibo Per Animali</h2>
+        <div class="row py-5">
+            <div class="col d-flex justify-content-around">
                 <?php foreach($array_ProductsFood as $curFood) {?>
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 15rem;">
                         <div class="card-body">
                             <img class="img-fluid" src="<?php echo $curFood->getImage() ?>" alt="">
                             <h5 class="card-title">
