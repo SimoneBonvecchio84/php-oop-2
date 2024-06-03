@@ -16,9 +16,7 @@ class Products {
         $this->image = $image;
         $this->type  = $type; 
 
-        if($price > 1 || $price < 300) {
-            throw new Exception("Prezzo inserito non valido");
-        }
+       
 
         if(!in_array($type,["Cane", "Gatto"])){
             throw new Exception("Categoria non valida");
@@ -33,6 +31,17 @@ class Products {
         return $this->name;
     }
 
+    /**
+     * Set the value of price
+     *
+     * @return  self
+     */ 
+    public function setPrice($price)
+    {
+        if($price > 1 || $price < 300) {
+            throw new Exception("Prezzo inserito non valido");
+        }
+    }
     /**
      * Get the value of price
      */ 
@@ -56,4 +65,5 @@ class Products {
         {
                 return $this->type;
         }
+
 }
