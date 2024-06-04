@@ -18,7 +18,7 @@ $cido3 = new Food("Gold Mousse", 14.82,"./img/cibo-gatto2.jpg", "Gatto", 2.2, "A
 // Giocattoli per cani 
 
 $giocattolo2 = new Toys("Osso Plasticone", 14.99, "./img/osso-giocattolo.jpg", "Cane", "M", 4, "Osso di gomma per cani");
-
+$giocattolo4 = new Toys("Super Pollo", 2.49, "./img/gioco-cane2.jpg", "Cane", "L", 5, "Pollo in lattice per cani");
 
 
 // Cibo per Cani
@@ -30,7 +30,7 @@ $cibo2 = new Food("Dog Heroes", 44.99, "./img/cibo-cane.jpg", "Cane", 3.8, "Tutt
 $array_ProductsToys = [
     $giocattolo1,
     $giocattolo3,   
-    $giocattolo1,
+    $giocattolo4,
     $giocattolo2,   
 ];
 
