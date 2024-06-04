@@ -6,11 +6,12 @@ require_once __DIR__ . "/models/food.php";
 // Giocattoli per gatti
 
 $giocattolo1 = new Toys("Topo Topone", 2.99, "./img/topo-giocattolo.jpg", "Gatto", "S", 3, "Topo giocattolo per gatti");
+$giocattolo3 = new Toys("Palla Baytion", 11.99,"./img/gioco-gatto2.jpg", "Gatto","S", 3.2 ,"Palla rotante automatica");
 
 // Cibo per gatti
 
 $cibo1 = new Food("Monge Gatto", 42.89, "./img/cibo-gatto.jpg", "Gatto", 4.8, "Adulto", "Pollo");
-
+$cido3 = new Food("Gold Mousse", 14.82,"./img/cibo-gatto2.jpg", "Gatto", 2.2, "Adulto", "Pollo" );
 
 
 
@@ -28,7 +29,7 @@ $cibo2 = new Food("Dog Heroes", 44.99, "./img/cibo-cane.jpg", "Cane", 3.8, "Tutt
 
 $array_ProductsToys = [
     $giocattolo1,
-    $giocattolo2,   
+    $giocattolo3,   
     $giocattolo1,
     $giocattolo2,   
 ];
