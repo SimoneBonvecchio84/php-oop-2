@@ -10,8 +10,8 @@ $giocattolo3 = new Toys("Palla Baytion", 11.99,"./img/gioco-gatto2.jpg", "Gatto"
 
 // Cibo per gatti
 
-$cibo1 = new Food("Monge Gatto", 42.89, "./img/cibo-gatto.jpg", "Gatto", 4.8, "Adulto", "Pollo");
-$cido3 = new Food("Gold Mousse", 14.82,"./img/cibo-gatto2.jpg", "Gatto", 2.2, "Adulto", "Pollo" );
+$cibo1 = new Food("Monge Gatto", 42.89, "./img/cibo-gatto.jpg", "Gatto", 3.4,  "Adulto", "Pollo");
+$cido3 = new Food("Gold Mousse", 14.82,"./img/cibo-gatto2.jpg", "Gatto", 5.3,  "Adulto", "Pollo" );
 
 // Giocattoli per cani 
 
@@ -20,7 +20,7 @@ $giocattolo4 = new Toys("Super Pollo", 2.49, "./img/gioco-cane2.jpg", "Cane", "L
 
 // Cibo per Cani
 
-$cibo2 = new Food("Dog Heroes", 44.99, "./img/cibo-cane.jpg", "Cane", 3.8, "Tutte le fascie d'età", "Maiale + Pollo");
+$cibo2 = new Food("Dog Heroes", 44.99, "./img/cibo-cane.jpg", "Cane", 3.2,  "Tutte le fascie d'età", "Maiale + Pollo");
 
 //Eccezione
 
@@ -29,7 +29,7 @@ $prodotto1 = new Products("Cuccia Plastica", -3, "", "Gatto");
 $price = 500;
 
 try {
-    $prodotto1->getPrice($price);
+    $prodotto1->setPrice($price);
 } catch (Exception $e) {
     echo "<br>Eccezione:" . $e->getMessage();
 }
@@ -136,7 +136,7 @@ $array_ProductsFood = [
                             </h5>
 
                             <h5>
-                            <?php echo $curFood->getWeight() ?>
+                            <!-- <?php echo $curFood->getWeight() ?> -->
                             Kg
                             </h5>
                             <h5>

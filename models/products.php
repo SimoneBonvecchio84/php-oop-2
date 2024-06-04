@@ -1,9 +1,11 @@
 <?php
-require_once __DIR__ . "/toys.php";
-require_once __DIR__ ."/food.php";
+require_once __DIR__ ."/../trait/weightable.php";
+
 
 
 class Products {
+    use Weightable;
+
     protected string $name;
     protected float  $price;
     protected string $image;
