@@ -16,8 +16,6 @@ class Products {
         $this->image = $image;
         $this->type  = $type; 
 
-       
-
         if(!in_array($type,["Cane", "Gatto"])){
             throw new Exception("Categoria non valida");
         }
@@ -54,8 +52,11 @@ class Products {
          * Get the value of image
          */ 
         public function getImage()
+        //se l immagine esiste e non è vuota restituiscimi l immagine
         {
+            if(isset($this->image) && !empty($this->image)){
                 return $this->image;
+            }
         }
 
         /**

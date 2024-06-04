@@ -13,17 +13,26 @@ $giocattolo3 = new Toys("Palla Baytion", 11.99,"./img/gioco-gatto2.jpg", "Gatto"
 $cibo1 = new Food("Monge Gatto", 42.89, "./img/cibo-gatto.jpg", "Gatto", 4.8, "Adulto", "Pollo");
 $cido3 = new Food("Gold Mousse", 14.82,"./img/cibo-gatto2.jpg", "Gatto", 2.2, "Adulto", "Pollo" );
 
-
-
 // Giocattoli per cani 
 
 $giocattolo2 = new Toys("Osso Plasticone", 14.99, "./img/osso-giocattolo.jpg", "Cane", "M", 4, "Osso di gomma per cani");
 $giocattolo4 = new Toys("Super Pollo", 2.49, "./img/gioco-cane2.jpg", "Cane", "L", 5, "Pollo in lattice per cani");
 
-
 // Cibo per Cani
 
 $cibo2 = new Food("Dog Heroes", 44.99, "./img/cibo-cane.jpg", "Cane", 3.8, "Tutte le fascie d'età", "Maiale + Pollo");
+
+//Eccezione
+
+$prodotto1 = new Products("Cuccia Plastica", -3, "", "Gatto");
+
+$price = 500;
+
+try {
+    $prodotto1->getPrice($price);
+} catch (Exception $e) {
+    echo "<br>Eccezione:" . $e->getMessage();
+}
 
 
 
@@ -58,7 +67,11 @@ $array_ProductsFood = [
 </head>
 
 <body>
-
+    <div>
+        <?php 
+        
+        ?>
+    </div>
     <div class="container py-5 text-center ">
         <h2>Giocattoli Per Animali</h2>
         <div class="row py-5 ">
@@ -124,15 +137,16 @@ $array_ProductsFood = [
 
                             <h5>
                             <?php echo $curFood->getWeight() ?>
+                            Kg
                             </h5>
                             <h5>
                                 Prodotto adatto per
-                            <?php echo $curFood->getAge_range() ?>
+                                <?php echo $curFood->getTaste() ?>
                             </h5>
-    
+                            
                             <h6>
                                 Prodotto al gusto di:
-                            <?php echo $curFood->getTaste() ?>
+                                <?php echo $curFood->getAge_range() ?>
                             </h6>
     
                         </div>
